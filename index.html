@@ -146,10 +146,15 @@
   </div>
 
   <script>
-    function showSection(sectionId) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-      document.getElementById(sectionId).classList.remove('hidden');
-    }
-  </script>
+  window.onload = function() {
+    showSection('home');  // 这句确保一加载页面就默认显示“Home”区块
+  };
+
+  function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+    document.getElementById(sectionId).classList.remove('hidden');
+  }
+</script>
+
 </body>
 </html>
